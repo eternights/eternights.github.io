@@ -1,43 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>nights</title>
-<style>
-  .img-socials-scale {
-    height: 1em;
-  }
-  p, h1 {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  body {
-    font-size: 15px;
-  }
-  .white-background {
-    background-color: #222;
-  }
-  .white-page {
-    background-color: #EEE;
-    padding: 12px;
-    margin: auto;
-    width: 600px;
-  }
-</style>
-</head>
-<body class="white-background">
-<div class="white-page">
-  <h1>about me</h1>
-  <p>i'm nights! i'm not really good at talking, sorry if i talk weirdly<br>any pronouns</p>
+  <head>
+    <title>nights</title>
 
-  <h1>contact</h1>
-  <ul>
-    <li><img src="images/discord.svg" alt="discord" class="img-socials-scale"> sennights</li>
-    <li><img src="images/spotify.svg" alt="spotify" class="img-socials-scale"> <a href="https://open.spotify.com/user/31rap5mwvpkeq6s7oohcss6pcpku">nights</a></a></li>
-  </ul>
+    <style>
+      .img-socials-scale {
+        height: 1em;
+      }
+      p, h1, li { 
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a:visited {
+        color: blue;
+      }
+      body {
+        font-size: 15px;
+      }
+      html, body {
+        height: 100%;
+      }
+      footer {
+        position: fixed;
+        padding: 10px;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+      }
+      .dark-background {
+        background-color: #222;
+      }
+      .white-page {
+        background-color: #EEE;
+        padding: 12px;
+        margin: auto;
+        width: 600px;
+        height: 100%;
+      }
+      .white-page :is(p, h1, li) {
+        color: #000;
+      }
+      .dark-page {
+        background-color: #333;
+        padding: 12px;
+        margin: auto;
+        width: 600px;
+      }
+      .dark-page :is(p, h1, li) {
+        color: #DDD;
+      }
+      .button-darkmode {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        text-align: right;
+      }
+      .img-darkmode {
+        height: 20px;
+      }
+      .wrapper-darkmode {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body class="dark-background">
+    <div class="white-page" id="Page">
+      <h1>about nights</h1>
+      <p>i'm nights! i'm not really good at talking, sorry if i talk weirdly
+        <br>any pronouns
+      </p>
 
-  <hr>
-  <footer>
-    <button type="button">Dark mode</button> (not working :P)
-  </footer>
-</div>
-</body>
+      <h1>contact</h1>
+      <ul>
+        <li><img src="images/discord.svg" alt="discord" class="img-socials-scale"> sennights</li>
+        <li><img src="images/spotify.svg" alt="spotify" class="img-socials-scale"> <a href="https://open.spotify.com/user/31rap5mwvpkeq6s7oohcss6pcpku">nights</a></li>
+        <li><img src="images/tumblr.svg" alt="tumblr" class="img-socials-scale"> <a href="https://ternights.tumblr.com">ternights</a></li>
+      </ul>
+
+      <footer>
+        <div class="wrapper-darkmode">
+          <hr>
+          <abbr title="When you're lost in the darkness, look for the light.">
+            <button class="button-darkmode" onclick="DarkMode()">
+              <img src="images/darkmode.png" class="img-darkmode" id="Button">
+            </button> 
+          </abbr>
+        </div>
+      </footer>
+
+      <script>
+        const DarkIcon = "images/darkmode.png";
+        const LightIcon = "images/lightmode.png";
+        let isDark = false;
+
+        function DarkMode() {
+          var Page = document.getElementById("Page");
+          var Button = document.getElementById("Button");
+          Page.classList.toggle("dark-page");
+          isDark = !isDark
+          Button.src = (isDark ? LightIcon : DarkIcon)
+        }
+      </script>
+    </div>
+  </body>
 </html> 
