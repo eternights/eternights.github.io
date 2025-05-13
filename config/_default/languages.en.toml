@@ -1,0 +1,48 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "nights"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "author.png"
+secondaryLogo = "2_logo.png"
+description = "who am i..."
+copyright = "MIT license — copyright (c) 2025 nicole nights"
+
+[[params.author.links]]
+bluesky = "https://bsky.app/profile/eternights.github.io"
+
+[[params.author.links]]
+github = "https://github.com/eternights"
+
+[[params.author.links]]
+gitlab = "https://gitlab.com/twonights"
+
+[[params.author.links]]
+goodreads = "https://www.goodreads.com/user/show/190316554-nights"
+
+[[params.author.links]]
+lastfm = "https://www.last.fm/user/aidennights"
+
+[[params.author.links]]
+music = "https://beta.music.apple.com/profile/skynights"
+
+[[params.author.links]]
+reddit = "https://www.reddit.com/user/eternights/"
+
+[[params.author.links]]
+steam = "https://steamcommunity.com/id/eternights/"
+
+[[params.author.links]]
+tumblr = "https://www.tumblr.com/blog/ternights"
+
+["params.author"]
+name = "nights"
+image = "author.png"
+headline = "any pronouns"
+bio = "sorry if im being weird"
